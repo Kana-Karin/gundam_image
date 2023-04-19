@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link href="style.css" rel="stylesheet" />
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <style type="text/css" data-glamor></style>
+  </head>
+
+  <body>
+    <div class="jumbotron jumbotron-fluid">
+      <div class="container" id="app">
+        <h2 class="white title">
+          全ての<del>ガンダム(一部)</del>を肯定するデリング・レンブラン
+        </h2>
+      </div>
+    </div>
+
+    <div class="container">
+      <div>
+        <p class="lead abstract">About</p>
+        <p>画像をPython + Open CV3で画像を増やしています</p>
+        <p>MS一機につき80枚ほど学習しています</p>
+        <p>学習AI:<a href="https://teachablemachine.withgoogle.com/">Teachable Machine</a></p>
+        <p>レンダリング:<a href="https://ml5js.org/">ml5.js</a></p>
+        <p class="text-primary">
+          デリング・レンブランさんに、増えすぎたモビルスーツの名前を教えてもらいましょう
+        </p>
+        <br/>
+        <p class="lead abstract">デリングさんが認識できるMS一覧</p>
+      </div>
+
+      <table class="table">
+        <thead>
+          <tr>
+            <th scope="col"></th>
+            <th scope="col">Name</th>
+            <th scope="col"></th>
+            <th scope="col"></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row"></th>
+            <td>RX-78ガンダム</td>
+            <td>ガンダムX</td>
+            <td>νガンダム</td>
+          </tr>
+          <tr>
+            <th scope="row"></th>
+            <td>∀ガンダム</td>
+            <td>ガンダムAGE</td>
+            <td>ゴッドガンダム</td>
+          </tr>
+          <tr>
+            <th scope="row"></th>
+            <td>ガンダムエクシア</td>
+            <td>RX0ユニコーンガンダム</td>
+            <td>ストライクフリーダムガンダム</td>
+          </tr>
+          <tr>
+            <th scope="row"></th>
+            <td>フリーダムガンダム</td>
+            <td>シャイニングガンダム</td>
+            <td>デスティニーガンダム</td>
+          </tr>
+          <tr>
+            <th scope="row"></th>
+            <td>ダブルオーライザー</td>
+            <td>ガンダム ルブリス</td>
+            <td>ガンダムルブリスウル</td>
+          </tr>
+          <tr>
+            <th scope="row"></th>
+            <td>ガンダムルブリスソーン</td>
+            <td>ガンダム・ファラクト</td>
+            <td>ガンダムAG</td>
+          </tr>
+          <tr>
+            <th scope="row"></th>
+            <td>XVX-016 ガンダムエアリアル</td>
+            <td>XVX-016RN ガンダムエアリアル(改修型)</td>
+            <td>ベギルベウ</td>
+          </tr>
+          <tr>
+            <th scope="row"></th>
+            <td>ディランザ</td>
+            <td>ディランザ ラウダ専用機</td>
+            <td>ディランザ グエル専用機</td>
+          <tr>
+            <th scope="row"></th>
+            <td>デミトレーナー</td>
+            <td>デミギャリソン</td>
+            <td>ハインドリー</td>
+          </tr>
+          <tr>
+            <th scope="row"></th>
+            <td>ミカエリス</td>
+            <td>ダリルバルデ</td>
+            <td>MS-05B ザクI</td>
+          </tr>
+          <tr>
+            <th scope="row"></th>
+            <td>MSM-04 アッガイ</td>
+            <td>MS-06 ザクII</td>
+            <td>MS-06S ザクII S型（シャア専用ザク）</td>
+          </tr>
+          <tr>
+            <th scope="row"></th>
+            <td>MS-07 グフ</td>
+            <td>MS-09 ドム</td>
+            <td>RGM-79ジム</td>
+          </tr>
+          </tr>
+        </tbody>
+      </table>
+      <br />
+    </div>
+    <div class="container">
+      <div class="row">
+        <div class="col">
+          <h3>画像を選択してください</h3>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col">
+          <div class="upload">
+            <input type="file" name="file" id="file" class="form-control" />
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col">
+          <div class="center">
+            <canvas id="canvas"></canvas>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col">
+          <div class="center">
+            <div class="balloon2">
+              <p class="txt" id="text">ガンダムが増えすぎた呪いは重い</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-12">
+          <div class="center2">
+            <img
+              src="https://i.gyazo.com/fc8c16d531d39b8e6f6f5a5c39d73d3b.png"
+              width="300px"
+              height="300px"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="https://unpkg.com/ml5@latest/dist/ml5.min.js"></script>
+    <script src="script.js"></script>
+  </body>
+  <footer>
+    <div class="container">
+      <a href="https://github.com/Kana-Karin">©2023 Kana</a>
+    </div>
+  </footer>
+</html>
